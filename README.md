@@ -3,6 +3,13 @@
 This extension enables direct integration of the [llm-rules](https://www.npmjs.com/package/llm-rules) engine into the Zed editor via the MCP protocol.
 It allows Zed to read rules from the same location as Cursor.
 
+**Important:** The extension determines which rules to load based on your current working directory—specifically, where you launched Zed. To ensure that Cursor rules are discovered at the root of your project (for example, in `.cursor/rules/`), you must open Zed from the project root.
+For example, run:
+```sh
+zeditor /path/to/your/project
+```
+If you open Zed in a different directory, only rules available in that subtree will be discovered and loaded.
+
 ## How llm-rules Reads and Exposes Rules
 
 The `llm-rules` library discovers Cursor rule files (typically in `.cursor/rules/*.mdc`) and exposes them to Zed and other MCP clients as dynamic tools. Each rule file must have YAML frontmatter at the top, which encodes rule metadata. This metadata is extracted and used to generate tool descriptions and annotations that guide the LLM on proper application of each rule.
