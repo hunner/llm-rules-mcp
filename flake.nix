@@ -9,7 +9,7 @@
       pkgs = import nixpkgs { inherit system; };
     in {
       devShells.${system}.default = pkgs.mkShell {
-        name = "llm-rules-mcp-dev";
+        name = "mcp-server-llm-rules-dev";
         buildInputs = [
           pkgs.nodejs_20
           pkgs.rustc

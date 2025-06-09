@@ -1,10 +1,10 @@
-id = "llm-rules-mcp"
+id = "mcp-server-llm-rules"
 name = "llm-rules MCP Server"
-description = "Model Context Protocol Server to supply LLM rules to Zed via llm-rules"
+description = "Model Context Protocol Server to supply Cursor rules to Zed via llm-rules"
 version = "0.1.0"
 schema_version = 1
 authors = ["Hunter Haugen <hunter@haugen.email>"]
-repository = "https://github.com/hunner/llm-rules-mcp"
+repository = "https://github.com/hunner/mcp-server-llm-rules"
 
-[context_servers.llm-rules-mcp]
+[context_servers.mcp-server-llm-rules]
 name = "llm-rules MCP Server"
