@@ -1,0 +1,14 @@
+[package]
+name = "llm-rules-mcp"
+version = "0.1.0"
+edition = "2021"
+authors = ["Hunter Haugen <hunter@haugen.email>"]
+description = "Zed extension for llm-rules MCP"
+license = "Apache-2.0"
+
+[lib]
+path = "src/llm_rules_mcp.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+zed_extension_api = "0.3.0"
